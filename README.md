@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # Multi-Agent Content Generation System
 
-This project demonstrates a modular, agent-based automation system that converts structured product data into multiple machine-readable content pages. It is designed to showcase agent orchestration, reusable content logic, and template-based generation.
+This project implements an event-driven, autonomous multi-agent system that converts structured product data into machine-readable content pages. The goal is to demonstrate agent autonomy, dynamic coordination, and clean system design rather than static or sequential control flow.
 
 ---
 
@@ -10,25 +9,22 @@ This project demonstrates a modular, agent-based automation system that converts
 Given a structured product dataset, the system automatically generates:
 
 - A FAQ page
-- A Product description page
-- A Comparison page (with a fictional competitor)
+- A Product information page
 
-All outputs are generated in JSON format without manual content writing.
+All outputs are generated programmatically in JSON format without manual content writing.
 
 ---
 
 ## How the System Works
 
-The solution is built using multiple agents, each responsible for a single task. A central orchestrator controls the execution flow, ensuring that agents run in the correct order to transform raw product data into structured content outputs.
+The system is composed of multiple independent agents, each responsible for a single task such as parsing data, generating questions, building reusable content blocks, or assembling final pages.
+
+Agents communicate indirectly through a shared event bus. Each agent observes shared state, decides when it is ready to act, and publishes its output as an event. A lightweight orchestrator coordinates execution without enforcing a fixed order, allowing agent interactions and execution flow to emerge dynamically.
 
 ---
 
 ## How to Run the Project
 
-1. Activate the virtual environment:
+1. (Optional) Activate the virtual environment:
 ```bash
 venv\Scripts\activate
-=======
-# kasparro-ai-agentic-content-generation-system-amal-tom-steephen
-Multi-agent content generation system for Kasparro assessment
->>>>>>> 054e74bfb95c4f275478fa542dce7d8bd6bc6014
